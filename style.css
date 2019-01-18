@@ -1,0 +1,232 @@
+@keyframes main-fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(#2d0e5b, #5a167c);
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+header {
+  width: 100%;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  width: 100%;
+  padding: .2em;
+  background-color: #070C12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 img {
+  height: 100px;
+}
+
+header h2 {
+  position: absolute;
+  font-size: 100%;
+  padding: .2em 1em .2em .2em;
+  background-color: #33b5e5;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+nav {
+  margin-top: 120px;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 150%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0 1em 0 1em;
+}
+
+nav a {
+  display: inline-block;
+  transition: all .25s;
+}
+
+nav a:link, nav a:visited, nav a:active {
+  color: #ff00aa;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #b3c3e0;
+}
+
+main {
+  animation: main-fadein .5s ease-out;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-auto-rows: 250px;
+  grid-gap: 15px;
+  width: 1280px;
+  margin: 0 auto 100px auto;
+  padding: 50px 50px 80px 50px;
+  color: #b3c3e0;
+}
+
+main#page-home {
+  margin-top: 50px;
+  border: 4px solid #00FFAF;
+}
+
+main#page-home section {
+  box-sizing: border-box;
+  border: 1px solid grey;
+  overflow: hidden;
+}
+
+main#page-home section a:link {
+  color: #b3c3e0;
+  text-decoration: none;
+}
+
+main#page-home section figcaption {
+  display: flex;
+  box-sizing: border-box;
+  padding: .5em;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  font-size: 300%;
+  font-weight: 700;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,.75);
+  background-color: rgba(255,0,170,0);
+  transition: all .3s;
+}
+
+main#page-home section:hover figcaption {
+  color: #00FFAF;
+  background-color: rgba(255,0,170,.25);
+}
+
+main#page-home section img {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(-100%);
+  filter: grayscale(0) brightness(100%);
+  transition: all .5s;
+}
+
+main#page-home section:hover img {
+  filter: grayscale(100%) brightness(150%);
+}
+
+main#page-blog {
+  width: 95%;
+  padding: 50px 0 80px 0;
+}
+
+main section.featured {
+  grid-column: 1 / span 5;
+  grid-row: span 2;
+}
+
+main section.projects {
+  grid-column: 1 / span 3;
+  grid-row: span 1;
+}
+
+main section.games {
+  grid-column: 4 / span 2;
+  grid-row: span 2;
+}
+
+main section.blog-sidebar {
+  grid-row: 1 / span 3;
+  margin-right: 20px;
+  padding-left: 15px;
+}
+
+main section.blog-sidebar a:link, main section.blog-sidebar a:visited, main section.blog-sidebar a:active {
+  color: #b3c3e0;
+  text-decoration: none;
+}
+
+main section.blog-sidebar a:link:after, main section.blog-sidebar a:visited:after, main section.blog-sidebar a:active:after {
+  display: block;
+  content: '';
+  margin-top: 3px;
+  border-bottom: 2px solid #ff00aa;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+main section.blog-sidebar a:hover:after {
+  transform: scaleX(1);
+}
+
+main section.blog-sidebar ul {
+  margin: 0 0 1.5em 20px;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+main section.blog-sidebar ul>li {
+  margin-bottom: .5em;
+}
+
+main section.blog-sidebar ul.side-libraries {
+  font-size: 150%;
+}
+
+main a.blog-item {
+  display: block;
+  grid-column: 2 / span 4;
+  border-top: 8px solid #00FFAF;
+  border-radius: 5px;
+  transition: background-color .5s;
+}
+
+main a.blog-item:hover {
+  background-color: rgba(255,255,255,.1);
+}
+
+main a.blog-item:link, main a.blog-item:visited, main a.blog-item:active {
+  text-decoration: none;
+  color: #b3c3e0;
+}
+
+main a.blog-item h2 {
+  width: 100%;
+  font-weight: 400;
+  font-size: 500%;
+}
+
+main a.blog-item p {
+  font-size: 125%;
+}
