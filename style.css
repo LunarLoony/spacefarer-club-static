@@ -8,16 +8,6 @@
   }
 }
 
-@keyframes submenu-slide {
-  from {
-    transform: translateY(-100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -109,11 +99,11 @@ nav ul.submenu li>a {
   padding: .5em 1em;
 }
 
-nav ul.submenu li>a:hover {
+nav ul.submenu li>a:hover, nav ul.submenu li>a:focus-within {
   background-color: #2d0e5b;
 }
 
-nav ul li:hover>ul.submenu, nav ul.submenu:hover {
+nav ul li:hover>ul.submenu, nav ul li:focus-within>ul.submenu, nav ul.submenu:hover {
   pointer-events: all;
   opacity: 1;
 }
