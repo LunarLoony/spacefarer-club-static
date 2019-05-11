@@ -3,44 +3,72 @@
   <head>
     <title>Spacefarer Club</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i|Roboto+Condensed:700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
 
   <body>
     <header>
-      <h1><img src="images/logo2.png" alt="Spacefarer Club"></h1>
+      <nav>
+        <ul class="nav-bar">
+          <li><a href="blog.htm">Articles</a>
+            <ul class="submenu">
+              <li><a href="#">Broken Circus</a></li>
+              <li><a href="#">Unknown Universe</a></li>
+              <li><a href="#">Miscellany</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.htm">Games</a></li>
+          <li><a href="index.htm">Links</a>
+            <ul class="submenu">
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">Twitch.tv</a></li>
+              <li><a href="#">UU Wiki</a></li>
+              <li><a href="#">Patreon</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="index.htm"><img src="images/logo2.png" class="logo" alt="Spacefarer Club"></a>
     </header>
 
-    <main>
-      <section class="featured">
-        <a href="#">
-        </a>
-      </section>
+    <main id="page-single-item">
 
-      <section class="projects">
-        <a href="#">
-        </a>
-      </section>
+      <div class="title-hero">
+        <img src="images/lacie-slezak-211725-unsplash.jpg" alt="Nyeowwww!">
+      </div>
+      <div class="title-text">
+        <h2>Nyeowwww! Or: A neo-classical treatise on the aesthetics of motion in a post-ironic industrial regime</h2>
+        <h3>Or or: how to wow people with excessive text</h3>
+      </div>
 
-      <section class="games">
-        <a href="#">
-        </a>
-      </section>
+      <section class="item-body">
+        <aside class="item-meta">
+          <ul>
+            <li>Filed under <a href="#">Video Games</a></li>
+            <li>Posted at 34th Octember at 14:07am</li>
+          </ul>
+        </aside>
 
-      <section class="blog">
-        <a href="#">
-        </a>
-      </section>
+        <article>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-      <section class="contact">
-        <a href="#">
-        </a>
-      </section>
+          <blockquote>It is not the strongest of species that survive, but the ones most adaptive to change.</blockquote>
+          <cite>Charles Darwin</cite>
 
-      <section class="links">
-        <a href="#">
-        </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <img src="images/florian-perennes-583674-unsplash.jpg" alt="Another Image">
+
+          <ul>
+            <li>Point a</li>
+            <li>Point 2</li>
+            <li>Point three</li>
+            <li>Point IV</li>
+          </ul>
+
+        </article>
       </section>
 
     </main>
