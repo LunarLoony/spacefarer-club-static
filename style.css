@@ -26,6 +26,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 header h1 {
@@ -104,7 +105,7 @@ main#page-home section {
   overflow: hidden;
 }
 
-main#page-home section a:link {
+main#page-home section a:link, main#page-home section a:visited, main#page-home section a:active {
   color: #b3c3e0;
   text-decoration: none;
 }
@@ -145,7 +146,7 @@ main#page-home section:hover img {
   filter: grayscale(100%) brightness(150%);
 }
 
-main#page-blog {
+main#page-blog, main#page-single-item {
   width: 95%;
   padding: 50px 0 80px 0;
 }
@@ -229,4 +230,157 @@ main a.blog-item h2 {
 
 main a.blog-item p {
   font-size: 125%;
+}
+
+main .title-hero {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 3;
+}
+
+main .title-hero>img {
+  padding-left: 10%;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .title-text {
+  grid-column: 3 / span 3;
+  grid-row: 1 / 3;
+  padding-left: 1em;
+  border-left: 2px solid #ff00aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+main .title-text>h2 {
+  font-family: 'Roboto Condensed', 'Univers Condensed', 'Helvetica Neue Condensed', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 400%;
+  line-height: 95%;
+}
+
+main .title-text>h3 {
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+main section.item-body {
+  grid-column: 1 / span 5;
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+main section.item-body aside {
+  padding-left: 75px;
+  padding-top: 52px;
+  line-height: 110%;
+}
+
+main section.item-body aside ul {
+  list-style-type: none;
+}
+
+main section.item-body article {
+  width: 70%;
+  margin: 20px auto;
+  font-size: 120%;
+  border-top: 2px solid #00FFAF;
+  padding: 30px;
+}
+
+main section.item-body article>* {
+  margin-bottom: 1.5em;
+}
+
+main section.item-body article>img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main section.item-body article>blockquote {
+  color: #ff00aa;
+  margin-bottom: .2em;
+}
+
+main section.item-body article>cite {
+  display: block;
+}
+
+@media all and (max-width: 1200px) {
+  main .title-hero {
+    z-index: -1;
+    grid-column: 1 / span 5;
+    grid-row: 1 / 2;
+  }
+
+  main .title-hero img {
+    padding: 0;
+    width: 100%;
+    opacity: .25;
+  }
+
+  main .title-text {
+    z-index: 1;
+    grid-column: 1 / span 5;
+    grid-row: 1 / 2;
+    margin-bottom: .5em;
+    border: 0;
+  }
+
+  main section.item-body {
+    grid-row-start: 2;
+  }
+
+  main section.item-body aside {
+    padding-left: 10px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  main .title-hero {
+    display: none;
+  }
+
+  main .title-text>h2 {
+    font-size: 300%;
+  }
+
+  main section.item-body article {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  main#page-single-item {
+    grid-auto-rows: 100px;
+  }
+
+  main .title-text>h2 {
+    font-size: 200%;
+  }
+
+  main section.item-body {
+    flex-direction: column;
+  }
+
+  main section.item-body aside {
+    order: 3;
+  }
+
+  main section.item-body article {
+    width: 80%;
+  }
+
+@media all and (max-width: 640px) {
+  header h1 img {
+    height: 50px;
+  }
+
+
+}
 }
